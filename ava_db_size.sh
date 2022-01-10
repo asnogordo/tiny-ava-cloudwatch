@@ -4,4 +4,4 @@ if [ -z "$GetAvaDbSize" ]
 then
 	return 1
 fi
-/usr/local/bin/aws cloudwatch put-metric-data --metric-name AvaDbSize --namespace "AVAPRD01" --value $(expr $GetAvaDbSize) --dimensions InstanceId=i-0f979461e744bfb81,InstanceType=t3a.medium --unit "Megabytes"
+/usr/local/bin/aws cloudwatch put-metric-data --metric-name AvaDbSize2 --namespace "AVAPRD01" --value $GetAvaDbSize --dimensions InstanceId=i-08a94b3419950fb4e,InstanceType=m6i.large --unit "Megabytes"
